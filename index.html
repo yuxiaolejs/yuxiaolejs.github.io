@@ -1,0 +1,61 @@
+<title>你一生的故事</title>
+<head>
+<script type="text/javascript">
+        //ƽ̨���豸�Ͳ���ϵͳ
+        var system = {
+            win: false,
+            mac: false,
+            xll: false,
+            ipad:false
+        };
+        //���ƽ̨
+        var p = navigator.platform;
+        system.win = p.indexOf("Win") == 0;
+        system.mac = p.indexOf("Mac") == 0;
+        system.x11 = (p == "X11") || (p.indexOf("Linux") == 0);
+        system.ipad = (navigator.userAgent.match(/iPad/i) != null)?true:false;
+        //��ת��䣬������ֻ���ʾ��Զ���ת��wap.baidu.comҳ��
+        if (system.win || system.mac || system.xll||system.ipad) {
+ 
+        } else {
+ 
+            alert("���Է���Ч����Ŷ~");
+        }
+        
+        function GetRequest() {
+		 var url = location.search; //��ȡurl��"?"�����ִ�
+		var theRequest = new Object();
+		 if (url.indexOf("?") != -1) { 
+		    var str = url.substr(1);
+		   strs = str.split("&");
+		    for(var i = 0; i < strs.length; i ++) { 
+		      theRequest[strs[i].split("=")[0]]=unescape(strs[i].split("=")[1]);
+		   }
+		}
+		  return theRequest;
+		}
+        
+        var Request = new Object();
+		Request = GetRequest();
+		var p;
+		p = Request['p'];
+		if(p==1) self.location='main.htm'; 
+        if(p==2) self.location='players/G/index.htm'; 
+</script>
+</head>
+<body class="mdui-theme-primary-teal mdui-theme-accent-teal" style="background-image: url('images/DarkLao.png'); background-attachment: fixed; background-size: cover;">
+<meta http-equiv="Content-Language" content="zh-cn">
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+<center>
+<b> <a style="color:#ffffff;font-family:微软雅黑;font-size:50px">网站建设中</a></b>
+<br><br><br><br><br><br><br><br><br>
+	<center>
+		<a style="color:#194BEB;font-family微软雅黑;font-size:50px">测试文本</a></b>
+	<br><br><br><br>
+	<a style="color:#194BEB;font-family:微软雅黑;font-size:40px" href="main.htm">测试连接</a></b>
+	<br><br><br><br>
+	<a style="color:#194BEB;font-family:微软雅黑;font-size:40px" href="players/G/index.htm">测试连接</a></b>
+	<br><br><br><br>
+	<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=330 height=300 src="//music.163.com/outchain/player?type=0&id=2262707199&auto=1&height=300"></iframe>
+</center>
+</body>
