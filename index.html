@@ -44,7 +44,7 @@ a.font2 {
  
         } else {
  
-            alert("推荐使用电脑访问\n Computer will display better on this site");
+            alert("推荐使用电脑访问\nComputer will display better on this site");
         }
         
         function GetRequest() {
@@ -63,8 +63,8 @@ a.font2 {
         var Request = new Object();
 		Request = GetRequest();
 		var p;
-		p = Request['p'];
-		if(p==1) self.location='main.htm'; 
+		p = Request['s'];
+		if(p=='trailer') self.location='trailer/index.html'; 
         if(p==2) self.location='players/G/index.htm'; 
 </script>
 </head>
