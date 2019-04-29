@@ -63,9 +63,9 @@ a.font2 {
         var Request = new Object();
 		Request = GetRequest();
 		var p;
-		p = Request['s'];
+		p = Request['autoplay'];
 		if(p=='trailer') self.location='trailer/index.html'; 
-        if(p==2) self.location='players/G/index.htm'; 
+        if(p=='full') alert("完整版尚未发布\nFull version is not published");
 </script>
 </head>
 <body class="mdui-theme-primary-teal mdui-theme-accent-teal" style="background-image: url('images/bcgnd.jpg'); background-attachment: fixed; background-size: cover;">
